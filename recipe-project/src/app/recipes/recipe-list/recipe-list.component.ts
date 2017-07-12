@@ -7,9 +7,10 @@ import {RecipeItemComponent} from './recipe-item.component';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-recipes:Recipe[]=[];
+recipes:Recipe[]=[new Recipe('schnitzel','good','https://www.gustos.ro/assets/recipes_images/2014/03/17/205129/tn4_img_0043.jpg',[]),
+new Recipe('salad','very good','https://www.gustos.ro/assets/recipes_images/2014/03/17/205129/tn4_img_0043.jpg',[])];
 @Output() recipeSelected=new EventEmitter<Recipe>();
-recipe=new Recipe('Dummy','Dummy','https://www.gustos.ro/assets/recipes_images/2014/03/17/205129/tn4_img_0043.jpg');
+
 
   ngOnInit() {
   }
