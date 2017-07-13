@@ -1,5 +1,5 @@
 import {Ingredient} from '../ingredient'
 export class Recipe {
-    constructor(public name,public description,public imagepath,public ingredients:Ingredient[]){}
+    constructor(public name:string,public description:string,public imagepath:string,public ingredients:Ingredient[]){}
     
 }
