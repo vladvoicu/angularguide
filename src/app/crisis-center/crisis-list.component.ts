@@ -17,6 +17,7 @@ import {Observable} from 'rxjs/Observable';
         <span class="badge">{{crisis.id}}</span> {{crisis.name}}
       </li>
     </ul>
+    <router-outlet></router-outlet>
  
     
   `,
