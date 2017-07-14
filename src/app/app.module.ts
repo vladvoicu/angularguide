@@ -1,31 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import { CrisisListComponent } from './crisis-list/crisis-list.component';
-import { HeroListComponent } from './hero-list/hero-list.component';
+import {CrisisCenterModule} from './crisis-center/crisis-center.module';
+import { HeroesModule } from './heroes/heroes.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-const appRoutes:Routes=[
-  {path:'crisis-center',component:CrisisListComponent},
-  {path:'heroes',component:HeroListComponent},
-  {path:'',redirectTo:'/heroes',pathMatch:'full'},
-  {path:'**',component:PageNotFoundComponent},
-];
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ComposeMessageComponent } from './compose-message.component';
+import {Router} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrisisListComponent,
-    HeroListComponent,
-    PageNotFoundComponent
+ 
+    
+    PageNotFoundComponent,
+ 
+    
+    ComposeMessageComponent
   ],
   imports: [
+    CommonModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    HeroesModule,
+    CrisisCenterModule,
    AppRoutingModule
   ],
-  providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

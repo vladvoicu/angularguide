@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
   <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
   <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+  <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>
   `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
 }
