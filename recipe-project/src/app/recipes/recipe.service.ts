@@ -11,4 +11,11 @@ new Recipe('salad','very good','https://www.gustos.ro/assets/recipes_images/2014
 getRecipes(){
   return this.recipes;
 }
+getRecipe(id:number)
+{
+  return this.recipes[id];
+}
+deleteRecipe(recipe:Recipe){
+  this.recipes.splice(this.recipes.indexOf(recipe),1);
+}
 }
