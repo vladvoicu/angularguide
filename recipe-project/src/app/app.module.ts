@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {Router} from '@angular/router';
@@ -30,7 +31,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     RecipeEditComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,FormsModule,ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [ShoppingListService],
